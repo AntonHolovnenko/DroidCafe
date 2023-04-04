@@ -27,6 +27,7 @@ public class CheckboxiesAndEtc extends AppCompatActivity {
 
     @SuppressLint("NonConstantResourceId")
     public void itemClicked(View view) {
+        string = "";
         //code to check if this checkbox is checked!
         CheckBox chokolate_syrup = findViewById(R.id.chokolate_syrup);
         CheckBox sprinkles = findViewById(R.id.sprinkles);
@@ -34,20 +35,17 @@ public class CheckboxiesAndEtc extends AppCompatActivity {
         CheckBox cherries = findViewById(R.id.cherries);
         CheckBox oreo_cookie_crumbles = findViewById(R.id.oreo_cookie_crumbles);
 
-
         if(chokolate_syrup.isChecked()){
             string += ((CheckBox) findViewById(R.id.chokolate_syrup)).getText() + " ";
-        }else if(sprinkles.isChecked()){
+        }if(sprinkles.isChecked()){
             string += ((CheckBox) findViewById(R.id.sprinkles)).getText() + " ";
-        }else if(crushed_nuts.isChecked()){
+        }if(crushed_nuts.isChecked()){
             string += ((CheckBox) findViewById(R.id.crushed_nuts)).getText() + " ";
-        }else if(cherries.isChecked()){
+        }if(cherries.isChecked()){
             string += ((CheckBox) findViewById(R.id.cherries)).getText() + " ";
-        }else if(oreo_cookie_crumbles.isChecked()){
+        }if(oreo_cookie_crumbles.isChecked()){
             string += ((CheckBox) findViewById(R.id.oreo_cookie_crumbles)).getText() + " ";
         }
-
-
     }
 
     public void displayToast(String message) {
